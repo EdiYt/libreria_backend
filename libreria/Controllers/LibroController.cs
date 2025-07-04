@@ -25,30 +25,69 @@ public class LibroController : ControllerBase
             .ToListAsync();
     }
 
-    // POST: api/Libro
     [HttpPost]
-    public async Task<ActionResult<Libro>> PostLibro(Libro libro)
+    public async Task<ActionResult<Libro>> PostLibro(
+    [FromForm] Libro libro,
+    IFormFile? imagen) 
     {
+        if (imagen != null && imagen.Length > 0)
+        {
+            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
+
+            var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "imagenes");
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            var filePath = Path.Combine(folderPath, fileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await imagen.CopyToAsync(stream);
+            }
+
+            libro.ImagenUrl = $"/imagenes/{fileName}";
+        }
+
         _context.Libros.Add(libro);
         await _context.SaveChangesAsync();
+
         return CreatedAtAction("GetLibro", new { id = libro.IdLibro }, libro);
     }
 
-    // PUT: api/Libro/id
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutLibro(int id, Libro libro)
+    public async Task<IActionResult> PutLibro(
+    int id,
+    [FromForm] Libro libro,
+    IFormFile? imagen)
     {
         if (id != libro.IdLibro) return BadRequest();
+
+        if (imagen != null && imagen.Length > 0)
+        {
+            var libroExistente = await _context.Libros.AsNoTracking().FirstOrDefaultAsync(l => l.IdLibro == id);
+            if (!string.IsNullOrEmpty(libroExistente?.ImagenUrl))
+            {
+                var oldFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", libroExistente.ImagenUrl.TrimStart('/'));
+                if (System.IO.File.Exists(oldFilePath))
+                {
+                    System.IO.File.Delete(oldFilePath);
+                }
+            }
+
+            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "imagenes", fileName);
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await imagen.CopyToAsync(stream);
+            }
+            libro.ImagenUrl = $"/imagenes/{fileName}";
+        }
+
         _context.Entry(libro).State = EntityState.Modified;
-        try
-        {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!LibroExists(id)) return NotFound();
-            else throw;
-        }
+        await _context.SaveChangesAsync();
+
         return NoContent();
     }
 
