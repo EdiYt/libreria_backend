@@ -22,13 +22,35 @@ public class GeneroController : ControllerBase
         return await _context.Generos.ToListAsync();
     }
 
-    // POST: api/Genero
     [HttpPost]
-    public async Task<ActionResult<Genero>> PostGenero(Genero genero)
+    public async Task<IActionResult> PostGenero([FromBody] Genero genero)
     {
-        _context.Generos.Add(genero);
-        await _context.SaveChangesAsync();
-        return CreatedAtAction("GetGenero", new { id = genero.IdGenero }, genero);
+        try
+        {
+            if (string.IsNullOrEmpty(genero.Nombre))
+                return BadRequest("El nombre es requerido");
+
+            genero.IdGenero = 0; 
+
+            _context.Generos.Add(genero);
+            await _context.SaveChangesAsync();
+
+            return Ok(new
+            {
+                success = true,
+                id = genero.IdGenero,
+                nombre = genero.Nombre
+            });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new
+            {
+                success = false,
+                error = "Error",
+                details = ex.Message
+            });
+        }
     }
 
     // PUT: api/Genero/id

@@ -22,6 +22,7 @@ public class AutorController : ControllerBase
         return await _context.Autores.ToListAsync();
     }
 
+    // POST: api/Autor
     [HttpPost]
     public async Task<IActionResult> PostAutor([FromBody] Autor autor)
     {
