@@ -12,4 +12,7 @@ public partial class Libro
 
     public int IdAutor { get; set; }
     public int IdGenero { get; set; }
+
+    public Autor Autor { get; set; } = null!;
+    public Genero Genero { get; set; } = null!;
 }
