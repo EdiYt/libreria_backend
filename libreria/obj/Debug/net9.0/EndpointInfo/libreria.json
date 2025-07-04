@@ -67,24 +67,7 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Autor"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Autor"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Autor"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -342,19 +325,92 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/Libro"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Libro"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Libro"
+                "type": "object",
+                "properties": {
+                  "IdLibro": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Titulo": {
+                    "type": "string"
+                  },
+                  "Precio": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "ImagenUrl": {
+                    "type": "string"
+                  },
+                  "IdAutor": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "IdGenero": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Autor.IdAutor": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Autor.Nombre": {
+                    "type": "string"
+                  },
+                  "Autor.Biografia": {
+                    "type": "string"
+                  },
+                  "Genero.IdGenero": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Genero.Nombre": {
+                    "type": "string"
+                  },
+                  "imagen": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "IdLibro": {
+                  "style": "form"
+                },
+                "Titulo": {
+                  "style": "form"
+                },
+                "Precio": {
+                  "style": "form"
+                },
+                "ImagenUrl": {
+                  "style": "form"
+                },
+                "IdAutor": {
+                  "style": "form"
+                },
+                "IdGenero": {
+                  "style": "form"
+                },
+                "Autor.IdAutor": {
+                  "style": "form"
+                },
+                "Autor.Nombre": {
+                  "style": "form"
+                },
+                "Autor.Biografia": {
+                  "style": "form"
+                },
+                "Genero.IdGenero": {
+                  "style": "form"
+                },
+                "Genero.Nombre": {
+                  "style": "form"
+                },
+                "imagen": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -401,19 +457,92 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/Libro"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Libro"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Libro"
+                "type": "object",
+                "properties": {
+                  "IdLibro": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Titulo": {
+                    "type": "string"
+                  },
+                  "Precio": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "ImagenUrl": {
+                    "type": "string"
+                  },
+                  "IdAutor": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "IdGenero": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Autor.IdAutor": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Autor.Nombre": {
+                    "type": "string"
+                  },
+                  "Autor.Biografia": {
+                    "type": "string"
+                  },
+                  "Genero.IdGenero": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Genero.Nombre": {
+                    "type": "string"
+                  },
+                  "imagen": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "IdLibro": {
+                  "style": "form"
+                },
+                "Titulo": {
+                  "style": "form"
+                },
+                "Precio": {
+                  "style": "form"
+                },
+                "ImagenUrl": {
+                  "style": "form"
+                },
+                "IdAutor": {
+                  "style": "form"
+                },
+                "IdGenero": {
+                  "style": "form"
+                },
+                "Autor.IdAutor": {
+                  "style": "form"
+                },
+                "Autor.Nombre": {
+                  "style": "form"
+                },
+                "Autor.Biografia": {
+                  "style": "form"
+                },
+                "Genero.IdGenero": {
+                  "style": "form"
+                },
+                "Genero.Nombre": {
+                  "style": "form"
+                },
+                "imagen": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -452,15 +581,15 @@
       "Autor": {
         "type": "object",
         "properties": {
-          "idAutor": {
+          "IdAutor": {
             "type": "integer",
             "format": "int32"
           },
-          "nombre": {
+          "Nombre": {
             "type": "string",
             "nullable": true
           },
-          "biografia": {
+          "Biografia": {
             "type": "string",
             "nullable": true
           }
@@ -470,11 +599,11 @@
       "Genero": {
         "type": "object",
         "properties": {
-          "idGenero": {
+          "IdGenero": {
             "type": "integer",
             "format": "int32"
           },
-          "nombre": {
+          "Nombre": {
             "type": "string",
             "nullable": true
           }
@@ -484,34 +613,34 @@
       "Libro": {
         "type": "object",
         "properties": {
-          "idLibro": {
+          "IdLibro": {
             "type": "integer",
             "format": "int32"
           },
-          "titulo": {
+          "Titulo": {
             "type": "string",
             "nullable": true
           },
-          "precio": {
+          "Precio": {
             "type": "number",
             "format": "double"
           },
-          "imagenUrl": {
+          "ImagenUrl": {
             "type": "string",
             "nullable": true
           },
-          "idAutor": {
+          "IdAutor": {
             "type": "integer",
             "format": "int32"
           },
-          "idGenero": {
+          "IdGenero": {
             "type": "integer",
             "format": "int32"
           },
-          "autor": {
+          "Autor": {
             "$ref": "#/components/schemas/Autor"
           },
-          "genero": {
+          "Genero": {
             "$ref": "#/components/schemas/Genero"
           }
         },

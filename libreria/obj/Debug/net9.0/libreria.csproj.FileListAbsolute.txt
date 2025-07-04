@@ -166,3 +166,4 @@ C:\Users\erick\Desktop\Ingenieria\Desarrollo web integral\libreria\libreria\obj\
 C:\Users\erick\Desktop\Ingenieria\Desarrollo web integral\libreria\libreria\obj\Debug\net9.0\libreria.pdb
 C:\Users\erick\Desktop\Ingenieria\Desarrollo web integral\libreria\libreria\obj\Debug\net9.0\libreria.genruntimeconfig.cache
 C:\Users\erick\Desktop\Ingenieria\Desarrollo web integral\libreria\libreria\obj\Debug\net9.0\ref\libreria.dll
+C:\Users\erick\Desktop\Ingenieria\Desarrollo web integral\libreria\libreria\bin\Debug\net9.0\libreria.staticwebassets.runtime.json

@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\10fef191-801d-4e9e-8ede-dfc05eae01e6.jpg",
+      "PackagePath": "staticwebassets\\images\\10fef191-801d-4e9e-8ede-dfc05eae01e6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\20805954-e4fe-44e5-b090-f613bd56c932.jpg",
+      "PackagePath": "staticwebassets\\images\\20805954-e4fe-44e5-b090-f613bd56c932.jpg"
+    },
+    {
+      "Id": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\d24ae39a-207c-4cd7-a5d6-e9589e1213a4.jpg",
+      "PackagePath": "staticwebassets\\images\\d24ae39a-207c-4cd7-a5d6-e9589e1213a4.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.libreria.props",
+      "PackagePath": "build\\libreria.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.libreria.props",
+      "PackagePath": "buildMultiTargeting\\libreria.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.libreria.props",
+      "PackagePath": "buildTransitive\\libreria.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.libreria.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.libreria.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

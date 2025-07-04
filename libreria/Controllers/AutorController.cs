@@ -22,13 +22,42 @@ public class AutorController : ControllerBase
         return await _context.Autores.ToListAsync();
     }
 
-    // POST: api/Autor
     [HttpPost]
-    public async Task<ActionResult<Autor>> PostAutor(Autor autor)
+    public async Task<IActionResult> PostAutor([FromBody] Autor autor)
     {
-        _context.Autores.Add(autor);
-        await _context.SaveChangesAsync();
-        return CreatedAtAction("GetAutor", new { id = autor.IdAutor }, autor);
+        try
+        {
+            if (string.IsNullOrEmpty(autor.Nombre))
+                return BadRequest("El nombre es requerido");
+
+            autor.IdAutor = 0;
+
+            _context.Autores.Add(autor);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetAutores), new { id = autor.IdAutor }, new
+            {
+                Id = autor.IdAutor,
+                Nombre = autor.Nombre,
+                Biografia = autor.Biografia
+            });
+        }
+        catch (DbUpdateException dbEx)
+        {
+            return StatusCode(500, new
+            {
+                error = "Error en la base de datos",
+                details = dbEx.InnerException?.Message
+            });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new
+            {
+                error = "Error interno",
+                details = ex.Message
+            });
+        }
     }
 
     // PUT: api/Autor/id
