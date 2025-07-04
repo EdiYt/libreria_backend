@@ -346,6 +346,11 @@
           "content": {
             "multipart/form-data": {
               "schema": {
+                "required": [
+                  "IdAutor",
+                  "IdGenero",
+                  "Titulo"
+                ],
                 "type": "object",
                 "properties": {
                   "IdLibro": {
@@ -466,6 +471,11 @@
         "additionalProperties": false
       },
       "Libro": {
+        "required": [
+          "IdAutor",
+          "IdGenero",
+          "Titulo"
+        ],
         "type": "object",
         "properties": {
           "IdLibro": {
@@ -473,8 +483,8 @@
             "format": "int32"
           },
           "Titulo": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "Precio": {
             "type": "number",

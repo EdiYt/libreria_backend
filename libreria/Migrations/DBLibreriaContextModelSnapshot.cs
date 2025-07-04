@@ -38,7 +38,10 @@ namespace libreria.Migrations
 
                     b.HasKey("IdAutor");
 
-                    b.ToTable("Autores");
+                    b.ToTable("Autores", null, t =>
+                        {
+                            t.ExcludeFromMigrations();
+                        });
                 });
 
             modelBuilder.Entity("libreria.Models.Genero", b =>
@@ -55,7 +58,10 @@ namespace libreria.Migrations
 
                     b.HasKey("IdGenero");
 
-                    b.ToTable("Generos");
+                    b.ToTable("Generos", null, t =>
+                        {
+                            t.ExcludeFromMigrations();
+                        });
                 });
 
             modelBuilder.Entity("libreria.Models.Libro", b =>
@@ -65,12 +71,6 @@ namespace libreria.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdLibro"));
-
-                    b.Property<int>("AutorIdAutor")
-                        .HasColumnType("int");
-
-                    b.Property<int>("GeneroIdGenero")
-                        .HasColumnType("int");
 
                     b.Property<int>("IdAutor")
                         .HasColumnType("int");
@@ -90,46 +90,21 @@ namespace libreria.Migrations
 
                     b.HasKey("IdLibro");
 
-                    b.HasIndex("AutorIdAutor");
-
-                    b.HasIndex("GeneroIdGenero");
-
                     b.HasIndex("IdAutor");
 
-                    b.HasIndex("IdGenero");
-
-                    b.ToTable("Libros");
+                    b.ToTable("Libros", null, t =>
+                        {
+                            t.ExcludeFromMigrations();
+                        });
                 });
 
             modelBuilder.Entity("libreria.Models.Libro", b =>
                 {
-                    b.HasOne("libreria.Models.Autor", "Autor")
-                        .WithMany()
-                        .HasForeignKey("AutorIdAutor")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("libreria.Models.Genero", "Genero")
-                        .WithMany()
-                        .HasForeignKey("GeneroIdGenero")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("libreria.Models.Autor", null)
                         .WithMany()
                         .HasForeignKey("IdAutor")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("libreria.Models.Genero", null)
-                        .WithMany()
-                        .HasForeignKey("IdGenero")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Autor");
-
-                    b.Navigation("Genero");
                 });
 #pragma warning restore 612, 618
         }

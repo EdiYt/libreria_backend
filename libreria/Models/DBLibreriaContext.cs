@@ -12,19 +12,13 @@ public class DBLibreriaContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Libro>(entity =>
-        {
-            entity.HasKey(l => l.IdLibro); 
+        modelBuilder.Entity<Autor>().ToTable("Autores", t => t.ExcludeFromMigrations());
+        modelBuilder.Entity<Genero>().ToTable("Generos", t => t.ExcludeFromMigrations());
+        modelBuilder.Entity<Libro>().ToTable("Libros", t => t.ExcludeFromMigrations());
 
-            entity.HasOne<Autor>()
-                  .WithMany()
-                  .HasForeignKey(l => l.IdAutor)
-                  .OnDelete(DeleteBehavior.Restrict);
-
-            entity.HasOne<Genero>()
-                  .WithMany()
-                  .HasForeignKey(l => l.IdGenero)
-                  .OnDelete(DeleteBehavior.Restrict);
-        });
+        modelBuilder.Entity<Libro>()
+            .HasOne<Autor>()
+            .WithMany()
+            .HasForeignKey(l => l.IdAutor);
     }
 }
