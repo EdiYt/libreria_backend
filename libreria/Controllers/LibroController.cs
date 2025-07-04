@@ -34,7 +34,7 @@ public class LibroController : ControllerBase
         {
             var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
 
-            var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "imagenes");
+            var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images");
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
@@ -47,7 +47,7 @@ public class LibroController : ControllerBase
                 await imagen.CopyToAsync(stream);
             }
 
-            libro.ImagenUrl = $"/imagenes/{fileName}";
+            libro.ImagenUrl = $"/images/{fileName}";
         }
 
         _context.Libros.Add(libro);
@@ -77,12 +77,12 @@ public class LibroController : ControllerBase
             }
 
             var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "imagenes", fileName);
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", fileName);
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
                 await imagen.CopyToAsync(stream);
             }
-            libro.ImagenUrl = $"/imagenes/{fileName}";
+            libro.ImagenUrl = $"/images/{fileName}";
         }
 
         _context.Entry(libro).State = EntityState.Modified;
