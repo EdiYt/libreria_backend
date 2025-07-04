@@ -1,7 +1,10 @@
-﻿namespace libreria.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace libreria.Models;
 
 public partial class Libro
 {
+    [Key]
     public int IdLibro { get; set; }
     public string Titulo { get; set; } = null!;
     public decimal Precio { get; set; }
