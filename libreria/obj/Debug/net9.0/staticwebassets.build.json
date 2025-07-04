@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gAA0dwaEWMi4TX5PCKRje01nD9fYVrfZIONQ4F3pt8w=",
+  "Hash": "YsRGOOkQvTRs+1eOTjAUODtLYG67dzn7NQn5rrF1FbM=",
   "Source": "libreria",
   "BasePath": "_content/libreria",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\10fef191-801d-4e9e-8ede-dfc05eae01e6.jpg",
+      "Identity": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\f94ed8a7-d5f5-46b2-b28a-dbb557616076.jpg",
       "SourceId": "libreria",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\",
       "BasePath": "_content/libreria",
-      "RelativePath": "images/10fef191-801d-4e9e-8ede-dfc05eae01e6#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/f94ed8a7-d5f5-46b2-b28a-dbb557616076#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -35,55 +35,13 @@
       "Integrity": "WIThtwdHPBFDidihQsTqWqPPXDs4/evZ0h2eklV+u64=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\10fef191-801d-4e9e-8ede-dfc05eae01e6.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\20805954-e4fe-44e5-b090-f613bd56c932.jpg",
-      "SourceId": "libreria",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\",
-      "BasePath": "_content/libreria",
-      "RelativePath": "images/20805954-e4fe-44e5-b090-f613bd56c932#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "4d4pul9zls",
-      "Integrity": "WIThtwdHPBFDidihQsTqWqPPXDs4/evZ0h2eklV+u64=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\20805954-e4fe-44e5-b090-f613bd56c932.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\d24ae39a-207c-4cd7-a5d6-e9589e1213a4.jpg",
-      "SourceId": "libreria",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\",
-      "BasePath": "_content/libreria",
-      "RelativePath": "images/d24ae39a-207c-4cd7-a5d6-e9589e1213a4#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "4d4pul9zls",
-      "Integrity": "WIThtwdHPBFDidihQsTqWqPPXDs4/evZ0h2eklV+u64=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\d24ae39a-207c-4cd7-a5d6-e9589e1213a4.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\f94ed8a7-d5f5-46b2-b28a-dbb557616076.jpg"
     }
   ],
   "Endpoints": [
     {
-      "Route": "images/10fef191-801d-4e9e-8ede-dfc05eae01e6.4d4pul9zls.jpg",
-      "AssetFile": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\10fef191-801d-4e9e-8ede-dfc05eae01e6.jpg",
+      "Route": "images/f94ed8a7-d5f5-46b2-b28a-dbb557616076.4d4pul9zls.jpg",
+      "AssetFile": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\f94ed8a7-d5f5-46b2-b28a-dbb557616076.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -104,7 +62,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 05:24:33 GMT"
+          "Value": "Fri, 04 Jul 2025 16:59:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -118,7 +76,7 @@
         },
         {
           "Name": "label",
-          "Value": "images/10fef191-801d-4e9e-8ede-dfc05eae01e6.jpg"
+          "Value": "images/f94ed8a7-d5f5-46b2-b28a-dbb557616076.jpg"
         },
         {
           "Name": "integrity",
@@ -127,8 +85,8 @@
       ]
     },
     {
-      "Route": "images/10fef191-801d-4e9e-8ede-dfc05eae01e6.jpg",
-      "AssetFile": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\10fef191-801d-4e9e-8ede-dfc05eae01e6.jpg",
+      "Route": "images/f94ed8a7-d5f5-46b2-b28a-dbb557616076.jpg",
+      "AssetFile": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\f94ed8a7-d5f5-46b2-b28a-dbb557616076.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -149,171 +107,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 05:24:33 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WIThtwdHPBFDidihQsTqWqPPXDs4/evZ0h2eklV+u64="
-        }
-      ]
-    },
-    {
-      "Route": "images/20805954-e4fe-44e5-b090-f613bd56c932.4d4pul9zls.jpg",
-      "AssetFile": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\20805954-e4fe-44e5-b090-f613bd56c932.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "428773"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WIThtwdHPBFDidihQsTqWqPPXDs4/evZ0h2eklV+u64=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 15:48:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4d4pul9zls"
-        },
-        {
-          "Name": "label",
-          "Value": "images/20805954-e4fe-44e5-b090-f613bd56c932.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WIThtwdHPBFDidihQsTqWqPPXDs4/evZ0h2eklV+u64="
-        }
-      ]
-    },
-    {
-      "Route": "images/20805954-e4fe-44e5-b090-f613bd56c932.jpg",
-      "AssetFile": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\20805954-e4fe-44e5-b090-f613bd56c932.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "428773"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WIThtwdHPBFDidihQsTqWqPPXDs4/evZ0h2eklV+u64=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 15:48:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WIThtwdHPBFDidihQsTqWqPPXDs4/evZ0h2eklV+u64="
-        }
-      ]
-    },
-    {
-      "Route": "images/d24ae39a-207c-4cd7-a5d6-e9589e1213a4.4d4pul9zls.jpg",
-      "AssetFile": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\d24ae39a-207c-4cd7-a5d6-e9589e1213a4.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "428773"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WIThtwdHPBFDidihQsTqWqPPXDs4/evZ0h2eklV+u64=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 05:27:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4d4pul9zls"
-        },
-        {
-          "Name": "label",
-          "Value": "images/d24ae39a-207c-4cd7-a5d6-e9589e1213a4.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WIThtwdHPBFDidihQsTqWqPPXDs4/evZ0h2eklV+u64="
-        }
-      ]
-    },
-    {
-      "Route": "images/d24ae39a-207c-4cd7-a5d6-e9589e1213a4.jpg",
-      "AssetFile": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\d24ae39a-207c-4cd7-a5d6-e9589e1213a4.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "428773"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WIThtwdHPBFDidihQsTqWqPPXDs4/evZ0h2eklV+u64=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 05:27:27 GMT"
+          "Value": "Fri, 04 Jul 2025 16:59:40 GMT"
         },
         {
           "Name": "Cache-Control",

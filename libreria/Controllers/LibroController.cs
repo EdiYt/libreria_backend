@@ -17,43 +17,55 @@ public class LibroController : ControllerBase
 
     // GET: api/Libro
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Libro>>> GetLibros()
+    public async Task<ActionResult<IEnumerable<object>>> GetLibros()
     {
         return await _context.Libros
-            .Include(l => l.Autor)
-            .Include(l => l.Genero)
+            .Select(l => new  
+            {
+                l.IdLibro,
+                l.Titulo,
+                l.Precio,
+                l.ImagenUrl,
+                AutorNombre = _context.Autores.FirstOrDefault(a => a.IdAutor == l.IdAutor).Nombre,
+                GeneroNombre = _context.Generos.FirstOrDefault(g => g.IdGenero == l.IdGenero).Nombre
+            })
             .ToListAsync();
     }
 
+    // POST: api/Libro
     [HttpPost]
-    public async Task<ActionResult<Libro>> PostLibro(
-    [FromForm] Libro libro,
-    IFormFile? imagen) 
+    public async Task<IActionResult> PostLibro([FromBody] Libro libro)
     {
-        if (imagen != null && imagen.Length > 0)
+        try
         {
-            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
+            // Verifica explícitamente los IDs
+            var autorExiste = await _context.Autores.FindAsync(libro.IdAutor);
+            var generoExiste = await _context.Generos.FindAsync(libro.IdGenero);
 
-            var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images");
-            if (!Directory.Exists(folderPath))
+            if (autorExiste == null || generoExiste == null)
             {
-                Directory.CreateDirectory(folderPath);
+                return BadRequest(new
+                {
+                    error = "IDs no existen",
+                    autorExiste = autorExiste != null,
+                    generoExiste = generoExiste != null
+                });
             }
 
-            var filePath = Path.Combine(folderPath, fileName);
+            _context.Libros.Add(libro);
+            await _context.SaveChangesAsync();
 
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await imagen.CopyToAsync(stream);
-            }
-
-            libro.ImagenUrl = $"/images/{fileName}";
+            return Ok(new { success = true, libro.IdLibro });
         }
-
-        _context.Libros.Add(libro);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction("GetLibro", new { id = libro.IdLibro }, libro);
+        catch (Exception ex)
+        {
+            return StatusCode(500, new
+            {
+                error = "Error completo",
+                message = ex.Message,
+                inner = ex.InnerException?.Message
+            });
+        }
     }
 
     [HttpPut("{id}")]

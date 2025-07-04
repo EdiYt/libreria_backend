@@ -14,7 +14,7 @@ public class DBLibreriaContext : DbContext
     {
         modelBuilder.Entity<Libro>(entity =>
         {
-            entity.HasKey(l => l.IdLibro);
+            entity.HasKey(l => l.IdLibro); 
 
             entity.HasOne<Autor>()
                   .WithMany()

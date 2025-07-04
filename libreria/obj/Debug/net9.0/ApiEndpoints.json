@@ -155,7 +155,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[libreria.Models.Libro, libreria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -174,77 +174,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "IdLibro",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Titulo",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Precio",
-        "Type": "System.Decimal",
-        "IsRequired": false
-      },
-      {
-        "Name": "ImagenUrl",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "IdAutor",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "IdGenero",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Autor.IdAutor",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Autor.Nombre",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Autor.Biografia",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Genero.IdGenero",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Genero.Nombre",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "imagen",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
+        "Name": "libro",
+        "Type": "Libro",
+        "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "libreria.Models.Libro",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "libreria.Controllers.LibroController",
@@ -287,31 +222,6 @@
       {
         "Name": "IdGenero",
         "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Autor.IdAutor",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Autor.Nombre",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Autor.Biografia",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Genero.IdGenero",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Genero.Nombre",
-        "Type": "System.String",
         "IsRequired": false
       },
       {
