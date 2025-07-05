@@ -1,8 +1,24 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\a77e8a6a-dc85-426a-a77d-b76daa5800e2.jpg",
+      "PackagePath": "staticwebassets\\images\\a77e8a6a-dc85-426a-a77d-b76daa5800e2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\av.jpg",
+      "PackagePath": "staticwebassets\\images\\av.jpg"
+    },
+    {
       "Id": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\f94ed8a7-d5f5-46b2-b28a-dbb557616076.jpg",
       "PackagePath": "staticwebassets\\images\\f94ed8a7-d5f5-46b2-b28a-dbb557616076.jpg"
+    },
+    {
+      "Id": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\it.jpg",
+      "PackagePath": "staticwebassets\\images\\it.jpg"
+    },
+    {
+      "Id": "C:\\Users\\erick\\Desktop\\Ingenieria\\Desarrollo web integral\\libreria\\libreria\\wwwroot\\images\\prueba.jpg",
+      "PackagePath": "staticwebassets\\images\\prueba.jpg"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.libreria.props",

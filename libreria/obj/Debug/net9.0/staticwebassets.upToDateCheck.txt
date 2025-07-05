@@ -1,1 +1,5 @@
+wwwroot\images\a77e8a6a-dc85-426a-a77d-b76daa5800e2.jpg
+wwwroot\images\av.jpg
 wwwroot\images\f94ed8a7-d5f5-46b2-b28a-dbb557616076.jpg
+wwwroot\images\it.jpg
+wwwroot\images\prueba.jpg

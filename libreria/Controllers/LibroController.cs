@@ -69,32 +69,39 @@ public class LibroController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutLibro(
-    int id,
-    [FromForm] Libro libro,
-    IFormFile? imagen)
+    public async Task<IActionResult> PutLibro(int id, [FromForm] Libro libro, IFormFile imagen)
     {
         if (id != libro.IdLibro) return BadRequest();
 
         if (imagen != null && imagen.Length > 0)
         {
-            var libroExistente = await _context.Libros.AsNoTracking().FirstOrDefaultAsync(l => l.IdLibro == id);
-            if (!string.IsNullOrEmpty(libroExistente?.ImagenUrl))
+            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images");
+
+            // Crear directorio si no existe
+            if (!Directory.Exists(uploadsFolder))
             {
-                var oldFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", libroExistente.ImagenUrl.TrimStart('/'));
+                Directory.CreateDirectory(uploadsFolder);
+            }
+
+            var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await imagen.CopyToAsync(stream);
+            }
+
+            // Eliminar imagen anterior si existe
+            if (!string.IsNullOrEmpty(libro.ImagenUrl))
+            {
+                var oldFilePath = Path.Combine(uploadsFolder, libro.ImagenUrl.Replace("/images/", ""));
                 if (System.IO.File.Exists(oldFilePath))
                 {
                     System.IO.File.Delete(oldFilePath);
                 }
             }
 
-            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", fileName);
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await imagen.CopyToAsync(stream);
-            }
-            libro.ImagenUrl = $"/images/{fileName}";
+            libro.ImagenUrl = $"/images/{uniqueFileName}";
         }
 
         _context.Entry(libro).State = EntityState.Modified;
